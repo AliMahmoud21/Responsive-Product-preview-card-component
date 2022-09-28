@@ -1,0 +1,104 @@
+/* Start Creating My Global Rules */
+* {
+    text-transform: capitalize;
+    box-sizing: border-box;
+    padding: 0;
+    margin:0;
+} 
+body {
+    font-family: 'Cairo', sans-serif;
+    background-color: antiquewhite;
+}
+.product {
+    position: relative;
+}
+.product .container {
+    padding:0 15px;
+    margin:100px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.product .container img {
+    height:500px;
+    width:350px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+.product .container .text {
+    background-color: #fff;
+    height:500px;
+    width:350px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.product .container .text h4 {
+    color:#777;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    font-weight:normal;
+    padding: 40px 30px;
+    padding-bottom: 20px;
+}
+.product .container .text h2 {
+    color:#111;
+    font-size: 45px;
+    font-weight: 600;
+    margin-top:10px;
+    margin-left:30px;
+    line-height: .9;
+}
+.product .container .text p {
+    color:#777;
+    padding:20px 30px 30px;
+    font-size: 18px;
+    line-height: 1.4;
+}
+.product .container .text p span {
+    text-transform: uppercase;
+}
+.product .container .price {
+    color:rgba(11, 97, 63, 0.888);
+    font-size: 35px;
+    font-weight:600;
+    padding:20px 30px;
+}
+.product .container .price::after {
+    content: "$169.99";
+    text-decoration: line-through;
+    margin-left:20px;
+    font-size: 16px;
+    color:#777;
+}
+.product .container button {
+    color:#fff;
+    background-color: rgba(11, 97, 63, 0.888);
+    border:none;
+    font-size: 20px;
+    margin-left: 30px;
+    margin-top: 20px;
+    padding-bottom: 30px;
+    padding: 10px 95px;
+    border-radius:10px;
+    text-align: center;
+    cursor: pointer;
+}
+
+@media (max-width:767px) {
+    .product .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .product .container img {
+        max-width: 100%;
+        border-radius: 0px;
+        border-top-right-radius: 10px;
+        border-top-left-radius: 10px;
+    }
+    .product .container .text {
+        border-radius: 0px;
+        border-bottom-right-radius: 10px;
+        border-bottom-left-radius: 10px;
+    }
+}
